@@ -71,10 +71,9 @@ const portfolio = [
       "Testar apps no Simulador do iOS vira um malabarismo de comandos de terminal e ferramentas espalhadas.",
     result:
       "Um app nativo para macOS que centraliza o QA no Simulador: push, deep links, captura de tela, simulação de rota e inspeção de rede.",
-    image:
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/cc/6d/9b/cc6d9b44-5035-0cba-74de-fac58981db3a/screenshot_1.png/800x500bb.jpg",
+    image: "/products/cosmokit-hero.jpg",
     links: [{ label: "Ver na App Store", url: "https://apps.apple.com/br/app/cosmokit-tools/id6756494471?mt=12" }],
-    contain: false,
+    contain: true,
     bullets: ["Vários simuladores", "Captura e gravação", "Proxy e localização"],
   },
   {
@@ -84,10 +83,9 @@ const portfolio = [
       "Como organizar a visão financeira sem depender de planilhas confusas?",
     result:
       "Uma experiência visual para enxergar o cenário com rapidez e tomar decisões com mais confiança.",
-    image:
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/19/c5/5019c5e6-a5e5-0948-6134-f20c12d8af79/screenshot_2.png/576x768bb.png",
+    image: "/products/cosmofinancas-hero.jpg",
     links: [{ label: "Ver na App Store", url: "https://apps.apple.com/br/app/cosmo-finan%C3%A7as/id6758966021" }],
-    contain: true,
+    contain: false,
     bullets: ["Clareza para o dia a dia", "Decisão mais rápida", "Uso real como referência"],
   },
   {
@@ -97,9 +95,9 @@ const portfolio = [
       "Organizar e priorizar as tarefas e atividades do dia a dia sem perder o foco no que importa.",
     result:
       "Um gerenciador de tarefas, hábitos e metas com estrutura hierárquica e progresso gamificado para manter a rotina sob controle.",
-    image: "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/04/6e/03/046e0331-11ce-c285-6d0a-1d088c9a195a/screenshot_1.png/576x768bb.png",
+    image: "/products/lifemanager-hero.jpg",
     links: [{ label: "Ver na App Store", url: "https://apps.apple.com/br/app/lifemanager/id6761347791" }],
-    contain: true,
+    contain: false,
     bullets: ["Criação rápida de tarefas", "Hábitos e metas", "Progresso gamificado"],
   },
   {
@@ -109,13 +107,12 @@ const portfolio = [
       "Como acompanhar e controlar sessões de IA no seu Mac sem ficar preso à mesa?",
     result:
       "Um app que leva o terminal do Mac para o bolso: acompanhe e comande sessões do Claude Code e do Codex em tempo real.",
-    image:
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9a/5a/16/9a5a1632-6882-e6be-461c-7fd138e23909/screenshot_1.png/576x768bb.png",
+    image: "/products/cosmoremote-hero.jpg",
     links: [
       { label: "Ver na App Store", url: "https://apps.apple.com/br/app/cosmoremote/id6761442464" },
       { label: "Ver no Google Play", url: "https://play.google.com/store/apps/details?id=com.cosmohq.cosmoremote" },
     ],
-    contain: true,
+    contain: false,
     bullets: ["Pareamento por QR", "Streaming em tempo real", "Sessões em paralelo"],
   },
   {
@@ -125,10 +122,9 @@ const portfolio = [
       "Entrar com uma ação sem saber como o juiz costuma decidir nem o histórico da parte contrária.",
     result:
       "Inteligência jurídica a partir de dados públicos oficiais do DJEN: estatísticas de decisão por juízo, padrões de sentença e histórico das partes.",
-    image:
-      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a5/36/70/a536706d-b662-20ef-b2b6-abed8aa347de/screenshot_1.png/320x480bb.jpg",
+    image: "/products/cosa-nostra-hero.jpg",
     links: [{ label: "Ver na App Store", url: "https://apps.apple.com/br/app/cosa-nostra/id6763812183" }],
-    contain: true,
+    contain: false,
     bullets: ["Conheça seu juiz", "Padrões de sentença", "Dados oficiais do DJEN"],
   },
   {
@@ -581,7 +577,7 @@ export default function CosmoLanding() {
                     <div
                       className={cn(
                         "relative aspect-[4/3] overflow-hidden border-b border-white/10",
-                        item.contain && "bg-white"
+                        item.contain && "bg-[#0f0c29]"
                       )}
                     >
                       {item.image ? (
@@ -590,7 +586,7 @@ export default function CosmoLanding() {
                           alt={item.name}
                           fill
                           unoptimized
-                          className={item.contain ? "object-contain" : "object-cover"}
+                          className={item.contain ? "object-contain" : "object-cover object-top"}
                           sizes="(min-width: 1024px) 33vw, 100vw"
                         />
                       ) : (
