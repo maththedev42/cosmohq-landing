@@ -90,7 +90,7 @@ const portfolio = [
   },
   {
     name: "LifeManager",
-    label: "App para iPhone e Android",
+    label: "App para iPhone",
     problem:
       "Organizar e priorizar as tarefas e atividades do dia a dia sem perder o foco no que importa.",
     result:
